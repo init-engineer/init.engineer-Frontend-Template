@@ -36,3 +36,13 @@
 #### 【投稿指南】
 1. 直接在本頁發 `issues` 並且附上您完成的程式碼即可。
 2. 直接在 [Discord](https://discord.gg/TCghDUT) 群組中的 `#社群活動` 類別當中的 `#【我不會寫前端】` 頻道投稿。
+
+#### 【簡要問答】
+- Ｑ：除了用原本bootstrap排版 如果要寫額外css 直接寫在下template下面嗎 還是要寫哪
+> 你提出一個很棒的問題，這邊我順便詳細解釋一下整個專案對於樣式的寫法。
+>
+> 如果單純只會 CSS 的話，直接在 <head> 當中加入 <style> 標籤，並在裡面開始撰寫 CSS 即可。
+>
+> 不過我會推薦學一下 SCSS，將其寫在 /resources/scss/frontend/pages/_donate.scss 當中，並且透過 npm 或其他你所能學到的前端工具去編譯，相關的檔案例如 package.json 或 webpack.mix.js 專案都有預先寫好了，所以通常會自動編譯成 frontend.css 的壓縮檔案。
+>
+> 不過我不太建議直接寫 CSS，會建議直接寫 SCSS 就是了。
