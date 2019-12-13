@@ -1,0 +1,63 @@
+/**
+ * Basic website settings.
+ *
+ * E.x. font-family, etc...
+ */
+
+@font-face {
+    font-family: 'Auraka';
+    src: url('/fonts/Auraka.ttf');
+}
+
+@font-face {
+    font-family: 'MBitmapRoundHK';
+    src: url('/fonts/MBitmapRoundHK-Light.otf');
+}
+
+@font-face {
+    font-family: 'KC24M';
+    src: url('/fonts/kc24m.ttf');
+}
+
+@font-face {
+    font-family: 'Zfull';
+    src: url('/fonts/Zfull-GB.ttf');
+}
+
+@font-face {
+    font-family: 'Mingliu';
+    src: url('/fonts/mingliu.ttc');
+}
+
+@font-face {
+    font-family: 'Harmonic';
+    src: url('/fonts/ZHS-Harmonic.ttf');
+}
+
+@font-face {
+    font-family: 'kaiu';
+    src: url('/fonts/kaiu.ttf');
+}
+
+@font-face {
+    font-family: 'Microsoft JhengHei';
+    src: url('/fonts/microsoft_jheng_hei.ttf');
+}
+
+@font-face {
+    font-family: 'MatissePro EB';
+    src: url('/fonts/FOT-MatissePro-EB.otf');
+}
+
+@font-face {
+    font-family: 'Taipei Sans TC Beta';
+    src: url('/fonts/TaipeiSansTCBeta-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'DOS';
+    src: url('/fonts/Fixedsys500c.eot')  format("eot"),
+         url('/fonts/Fixedsys500c.woff') format('woff'),
+         url('/fonts/Fixedsys500c.ttf')  format('truetype'),
+         url('/fonts/Fixedsys500c.svg')  format('svg');
+}

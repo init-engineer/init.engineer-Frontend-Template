@@ -1,0 +1,89 @@
+{
+    "name": "@init-engineer/init.engineer",
+    "author": "init-engineer kantai.developer@gmail.com",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "dev": "cross-var $npm_execpath run development",
+        "development": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-var $npm_execpath run development -- --watch",
+        "watch-poll": "cross-var $npm_execpath run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "cross-var $npm_execpath run production",
+        "production": "cross-env NODE_ENV=production webpack --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "test": "cross-env NODE_ENV=test jest",
+        "tdd": "cross-var $npm_execpath run test -- --watch --notify"
+    },
+    "devDependencies": {
+        "@coreui/coreui": "^2.1.16",
+        "@fortawesome/fontawesome-free": "^5.11.2",
+        "@vue/test-utils": "^1.0.0-beta.30",
+        "axios": "^0.19",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-jest": "^24.8.0",
+        "bootstrap": "^4.4.1",
+        "cross-env": "^5.2.0",
+        "cross-var": "^1.1.0",
+        "eslint": "^6.7.2",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "eslint-plugin-vue": "^5.2.3",
+        "jest": "^24.8.0",
+        "jquery": "^3.4.1",
+        "laravel-mix": "^4.0.16",
+        "lodash": "^4.17.13",
+        "pace": "github:HubSpot/pace#v1.0.2",
+        "perfect-scrollbar": "^1.4.0",
+        "popper.js": "^1.16.0",
+        "resolve-url-loader": "^2.3.2",
+        "sass": "^1.23.7",
+        "sass-loader": "^7.1.0",
+        "sweetalert2": "^8.19.0",
+        "vue": "^2.6.10",
+        "vue-jest": "^3.0.4",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "browserslist": {
+        "development": "last 1 version",
+        "production": ">2%, Firefox ESR"
+    },
+    "jest": {
+        "testURL": "http://localhost",
+        "roots": [
+            "<rootDir>/tests/Javascript/"
+        ],
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/resources/js/$1"
+        },
+        "moduleFileExtensions": [
+            "js",
+            "vue"
+        ],
+        "transform": {
+            "^.+\\.js$": "babel-jest",
+            ".*\\.(vue)$": "vue-jest"
+        }
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "dependencies": {
+        "@inotom/vue-go-top": "^1.1.0",
+        "acorn-jsx": "^5.1.0",
+        "animate.css": "^3.7.2",
+        "css-doodle": "^0.7.6",
+        "csshake": "^1.5.3",
+        "fontfaceobserver": "^2.1.0",
+        "jshint": "^2.10.3",
+        "vue-content-loading": "^1.6.0",
+        "vue-gallery": "^2.0.1",
+        "vue-infinite-loading": "^2.4.4",
+        "vue-marquee-text-component": "^1.1.1",
+        "vue-picture-input": "^2.1.6",
+        "vue-tippy": "^4.2.1",
+        "vuelidate": "^0.7.4"
+    }
+}
