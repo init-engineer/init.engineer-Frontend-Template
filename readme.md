@@ -43,6 +43,69 @@
 >
 > 如果單純只會 CSS 的話，直接在 `<head>` 當中加入 `<style>` 標籤，並在裡面開始撰寫 CSS 即可。
 >
-> 不過我會推薦學一下 SCSS，將其寫在 `/resources/scss/frontend/pages/_donate.scss` 當中，並且透過 `npm` 或其他你所能學到的前端工具去編譯，相關的檔案例如 `package.json` 或 `webpack.mix.js` 專案都有預先寫好了，所以通常會自動編譯成 `frontend.css` 的壓縮檔案。
+> 不過我會推薦學一下 SCSS，將其寫在 `/resources/scss/frontend/pages/_leaderboard.scss` 當中，並且透過 `npm` 或其他你所能學到的前端工具去編譯，相關的檔案例如 `package.json` 或 `webpack.mix.js` 專案都有預先寫好了，所以通常會自動編譯成 `frontend.css` 的壓縮檔案。
 >
 > 不過我不太建議直接寫 CSS，會建議直接寫 SCSS 就是了。
+
+- Ｑ：請問我要怎麼認領【我不會寫前端】前端切版的模板？
+> 你只要下載 `INIT.ENGINEER` 前端模板，去撰寫 `/templates/leaderboard-2019.html` 這份檔案即可，這次的模板總共有分兩種，分別是 `【標題】` 以及 `【年度最佳 xx 文章】`，投稿所需要的資料也都附在註解當中，要注意的是每個模板都要適應 `電腦版` 以及 `手機版`，這個部分已經先幫忙切好了，下面我就把兩個模板都附上來：
+
+```html
+<!--
+【標題】
+  說明：這是排行榜的首頁內容，會簡要的顯示一些數據，其餘的自由發揮。
+  必要顯示資料：
+    2019 年累積的文章數量 | Example: 2,000
+    2019 年累積的社群留言 | Example: 50,000
+    2019 年累積的按讚數量 | Example: 300,000
+    2019 年累積的分享數量 | Example: 100,000
+  非必要，但可自由發揮的資料：
+    2019 年累積的刪除文章數量 | Example: 200
+    2019 年累積的被封鎖的人數 | Example: 50
+-->
+<div class="container">
+  <!-- 電腦版 -->
+  <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
+    <!-- Something code ... -->
+  </div>
+
+  <!-- 手機版 -->
+  <div class="d-md-none vh-100 position-relative">
+    <!-- Something code ... -->
+  </div>
+</div>
+```
+
+```html
+<!--
+【年度最佳 xx 文章】
+  說明：這個區塊會顯示 2019 年度全部社群平台的讚數加總起來，讚數累計最多的文章。
+  必要顯示資料：
+    文章的編號                 | Example: #xxxx
+    文章的連結                 | Example: https://kaobei.engineer/cards/show/xxxxx
+    文章的圖片                 | Example: https://kaobei.engineer/...../image.jpeg
+    文章的 Facebook 正式機 讚數 | Example: 2,222
+    文章的 Facebook 測試機 讚數 | Example: 1,111
+    文章的 Twitter 正式機 讚數  | Example: 555
+    文章的 Plurk 正式機 讚數    | Example: 666
+    文章的讚數總和              | Example: 4,554
+  非必要，但可自由發揮的資料：
+    文章的內容                 | Example: 【版主公告】我本來不會寫程式，但自從我參加這場活動之後，我覺得我好像稍微會寫程式了！
+
+  附註說明：圖片的部分，可以用以下圖片做為測試圖片
+    - ./public/img/frontend/cards/cards.png
+    - ./public/img/frontend/cards/cards-long.png
+    - ./public/img/frontend/cards/cards-too-long.png
+-->
+<div class="container">
+  <!-- 電腦版 -->
+  <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
+    <!-- Something code ... -->
+  </div>
+            
+  <!-- 手機版 -->
+  <div class="d-md-none vh-100 position-relative">
+    <!-- Something code ... -->
+  </div>
+</div>
+```
