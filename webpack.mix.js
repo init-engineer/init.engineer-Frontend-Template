@@ -27,7 +27,13 @@ mix.setPublicPath('public')
         'sweetalert2',
         'lodash'
     ])
-    .sourceMaps();
+    .sourceMaps()
+    .browserSync({
+        proxy: false,
+        watch: true,
+        port:'3000',
+        server: {baseDir: './'} // this is the only difference
+    });
 
 if (mix.inProduction()) {
     mix.version()
