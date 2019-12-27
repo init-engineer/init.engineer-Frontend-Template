@@ -34,18 +34,28 @@
     <link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon" />
 
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
+    <link type="text/css" rel="stylesheet" href="./leadertemplate.css">
 </head>
 
 <body class="bg-img-star pt-5" style="background-color: black;">
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
+        <nav
+            class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
             <div>
                 <a href="https://kaobei.engineer" class="navbar-brand">純靠北工程師</a>
-                <a href="https://www.facebook.com/init.kobeengineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/220/220200.svg" alt="Facebook" class="rounded" width="30" height="30"></a>
-                <a href="https://twitter.com/kaobei_engineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/124/124021.svg" alt="Twitter" class="rounded" width="30" height="30"></a>
-                <a href="https://plurk.com/kaobei_engineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/124/124026.svg" alt="Plurk" class="rounded" width="30" height="30"></a>
+                <a href="https://www.facebook.com/init.kobeengineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/220/220200.svg" alt="Facebook" class="rounded"
+                        width="30" height="30"></a>
+                <a href="https://twitter.com/kaobei_engineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/124/124021.svg" alt="Twitter" class="rounded"
+                        width="30" height="30"></a>
+                <a href="https://plurk.com/kaobei_engineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/124/124026.svg" alt="Plurk" class="rounded" width="30"
+                        height="30"></a>
             </div>
-            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導航" class="navbar-toggler navbar-toggler-right border-0 collapsed">
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導航"
+                class="navbar-toggler navbar-toggler-right border-0 collapsed">
                 <span class="navbar-toggler-icon icon-bar top-bar"></span>
                 <span class="navbar-toggler-icon icon-bar middle-bar"></span>
                 <span class="navbar-toggler-icon icon-bar bottom-bar"></span>
@@ -58,59 +68,252 @@
                 </ul>
             </div>
         </nav>
+        <div class="container desk">
+            <css-doodle class="doodles">
+                :doodle {
+                @grid: 500x1/ 40vmin;
+                perspective: 10vmin;
+                background: #000;
+                }
 
-        <!--
-            【標題】
-            說明：這是排行榜的首頁內容，會簡要的顯示一些數據，其餘的自由發揮。
-            必要顯示資料：
-                2019 年累積的文章數量 | Example: 2,000
-                2019 年累積的社群留言 | Example: 50,000
-                2019 年累積的按讚數量 | Example: 300,000
-                2019 年累積的分享數量 | Example: 100,000
-            非必要，但可自由發揮的資料：
-                2019 年累積的刪除文章數量 | Example: 200
-                2019 年累積的被封鎖的人數 | Example: 50
-        -->
-        <div class="container">
+                @place-cell: center;
+                @size: 40% 1px;
+
+                will-change: transform, opacity;
+                transform-style: preserve-3d;
+
+                background: linear-gradient(to left,
+                @multi(@p([2-4]), @p(#00b8a9, #f8f3d4, #f6416c, #ffde7d)),
+                transparent @r(50%)
+                );
+
+                animation: move @r(1s, 2s, .1) linear infinite;
+                animation-delay: -@r(.1s, 2s);
+
+                --trans:
+                translateX(50%)
+                rotateX(@r(-180deg, 180deg))
+                rotateY(@r(-180deg, 180deg))
+                rotateZ(@r(-180deg, 180deg));
+
+                transform-origin: 0 center;
+                transform: var(--trans) scale(2);
+                opacity: 0;
+
+                @keyframes move {
+                20% { opacity: 1; }
+                100% { transform: var(--trans) scale(0); }
+                }
+            </css-doodle>
+
             <!-- 電腦版 -->
-            <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
+            <div class="d-none d-md-flex align-items-md-center vh-100 justify-content-center flex-column">
                 <!-- Something code ... -->
+
+                <div class="firstilte">
+                    <div class="engtitle">
+                        <h2>純靠北工程師</h2>
+                    </div>
+                </div>
+                <div class="titlearea">
+                    <div class="titleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="article_title">
+                                <h4>2019 年累積的文章數量</h4>
+                            </div>
+                            <div>
+                                <img src="./JOJO.png" width="200" height="285">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>2,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="titleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="community_title">
+                                <h4>2019 年累積的社群留言</h4>
+                            </div>
+                            <div>
+                                <img src="./howdareu.png" width="200" height="285">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>50,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="titleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="liked_title">
+                                <h4>2019 年累積的按讚數量</h4>
+                            </div>
+                            <div>
+                                <img src="./ode.png" width="200" height="285">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>300,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="titleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="share_title">
+                                <h4>2019 年累積的分享數量</h4>
+                            </div>
+                            <div>
+                                <img src="./kodare.png" width="200" height="285">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>100,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgarea" id="imagearea" onclick="toggle()">
+                    <div class="rotatey">
+                        <div class="cardimg">
+                            <img src="./card.png" width="200" height="285">
+                            <h4 class="alert">翻開覆蓋的卡</h4>
+                        </div>
+                        <div class="miximg">
+                            <img src="./mutriple.png" width="200" height="285">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- 手機版 -->
-            <div class="d-md-none vh-100 position-relative">
+            <div class="d-md-none vh-100 align-items-center d-flex a">
                 <!-- Something code ... -->
+                <div class="mobiletitlearea">
+                    <div class="mobiletitleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="article_title">
+                                <h4>2019 年累積的</h4>
+                                    <h4>文章數量</h4>
+                            </div>
+                            <div>
+                                <img src="./JOJO.png" width="200" height="250">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>2,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobiletitleinfo" id="titleactive">
+                        <div class="flextitle">
+                            <div class="article_title">
+                                <h4>2019 年累積的</h4>
+                                    <h4>社群留言</h4>
+                            </div>
+                            <div>
+                                <img src="./howdareu.png" width="200" height="250">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>50,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobiletitleinfo" id="titleactive">
+                        <div class="flextitle mobileflex">
+                            <div class="article_title">
+                                <h4>2019 年累積的</h4>
+                                    <h4>按讚數量</h4>
+                            </div>
+                            <div>
+                                <img src="./ode.png" width="200" height="250">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>300,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobiletitleinfo" id="titleactive">
+                        <div class="flextitle mobileflex">
+                            <div class="article_title">
+                                <h4>2019 年累積的</h4>
+                                    <h4>分享數量</h4>
+                            </div>
+                            <div>
+                                <img src="./kodare.png" width="200" height="250">
+                            </div>
+                            <div class="hp">
+                                <div class="hpboard">
+                                    <div class="hpinfo">
+                                        <h4>LP</h4>
+                                        <p>100,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <hr class="border border-w-4">
+        <hr class="border border-w-4" style="margin: 0;">
 
-        <!--
-            【年度最佳 xx 文章】
-            說明：這個區塊會顯示 2019 年度全部社群平台的讚數加總起來，讚數累計最多的文章。
-            必要顯示資料：
-                文章的編號                 | Example: #xxxx
-                文章的連結                 | Example: https://kaobei.engineer/cards/show/xxxxx
-                文章的圖片                 | Example: https://kaobei.engineer/...../image.jpeg
-                文章的 Facebook 正式機 讚數 | Example: 2,222
-                文章的 Facebook 測試機 讚數 | Example: 1,111
-                文章的 Twitter 正式機 讚數  | Example: 555
-                文章的 Plurk 正式機 讚數    | Example: 666
-                文章的讚數總和              | Example: 4,554
-            非必要，但可自由發揮的資料：
-                文章的內容                 | Example: 【版主公告】我本來不會寫程式，但自從我參加這場活動之後，我覺得我好像稍微會寫程式了！
 
-            附註說明：圖片的部分，可以用以下圖片做為測試圖片
-            - ./public/img/frontend/cards/cards.png
-            - ./public/img/frontend/cards/cards-long.png
-            - ./public/img/frontend/cards/cards-too-long.png
-        -->
+        【年度最佳 xx 文章】
+        說明：這個區塊會顯示 2019 年度全部社群平台的讚數加總起來，讚數累計最多的文章。
+        必要顯示資料：
+        文章的編號 | Example: #xxxx
+        文章的連結 | Example: https://kaobei.engineer/cards/show/xxxxx
+        文章的圖片 | Example: https://kaobei.engineer/...../image.jpeg
+        文章的 Facebook 正式機 讚數 | Example: 2,222
+        文章的 Facebook 測試機 讚數 | Example: 1,111
+        文章的 Twitter 正式機 讚數 | Example: 555
+        文章的 Plurk 正式機 讚數 | Example: 666
+        文章的讚數總和 | Example: 4,554
+        非必要，但可自由發揮的資料：
+        文章的內容 | Example: 【版主公告】我本來不會寫程式，但自從我參加這場活動之後，我覺得我好像稍微會寫程式了！
+
+        附註說明：圖片的部分，可以用以下圖片做為測試圖片
+        - ./public/img/frontend/cards/cards.png
+        - ./public/img/frontend/cards/cards-long.png
+        - ./public/img/frontend/cards/cards-too-long.png
+
         <div class="container">
             <!-- 電腦版 -->
             <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
                 <!-- Something code ... -->
             </div>
-            
+
             <!-- 手機版 -->
             <div class="d-md-none vh-100 position-relative">
                 <!-- Something code ... -->
@@ -123,7 +326,8 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-white font-weight-bold">關於本站</h6>
                         <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                        <p><img src="https://kaobei.engineer/img/frontend/background/WsOFRId.png" alt="就看你能多有梗" class="img-fluid rounded w-100"></p>
+                        <p><img src="https://kaobei.engineer/img/frontend/background/WsOFRId.png" alt="就看你能多有梗"
+                                class="img-fluid rounded w-100"></p>
                     </div>
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                         <h6 class="text-white font-weight-bold">聯絡我們</h6>
@@ -140,19 +344,37 @@
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
                         <h6 class="text-white font-weight-bold">社群平台</h6>
                         <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                        <p><a href="https://kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/Zl6Mrfs.png" alt="官方網站" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.facebook.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/zgwvd6x.png" alt="Facebook 測試機" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.facebook.com/init.kobeengineer"><img src="https://kaobei.engineer/img/frontend/banner/3qOl69x.png" alt="Facebook 正式機" class="img-fluid rounded"></a></p>
-                        <p><a href="https://twitter.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/aPI28fr.png" alt="Twitter" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.plurk.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/SFcRaLN.png" alt="Plurk" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.instagram.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/6FgkF3R.png" alt="Instagram" class="img-fluid rounded"></a></p>
-                        <p><a href="https://kaobei-engineer.tumblr.com"><img src="https://kaobei.engineer/img/frontend/banner/dffwOx9.png" alt="Tumblr" class="img-fluid rounded"></a></p>
-                        <p><a href="https://discord.gg/tPhnrs2"><img src="https://kaobei.engineer/img/frontend/banner/tknHq2i.png" alt="Discord" class="img-fluid rounded"></a></p>
+                        <p><a href="https://kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/Zl6Mrfs.png" alt="官方網站"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.facebook.com/kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/zgwvd6x.png" alt="Facebook 測試機"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.facebook.com/init.kobeengineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/3qOl69x.png" alt="Facebook 正式機"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://twitter.com/kaobei_engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/aPI28fr.png" alt="Twitter"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.plurk.com/kaobei_engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/SFcRaLN.png" alt="Plurk"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.instagram.com/kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/6FgkF3R.png" alt="Instagram"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://kaobei-engineer.tumblr.com"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/dffwOx9.png" alt="Tumblr"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://discord.gg/tPhnrs2"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/tknHq2i.png" alt="Discord"
+                                    class="img-fluid rounded"></a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright text-center text-white py-3">
-                <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br class="d-block d-md-none">Powered by <a href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
+                <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br
+                        class="d-block d-md-none">Powered by <a
+                        href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
             </div>
         </footer>
     </div><!-- #app -->
@@ -161,6 +383,7 @@
     <script src="./../public/js/manifest.js"></script>
     <script src="./../public/js/vendor.js"></script>
     <script src="./../public/js/frontend.js"></script>
+    <script src="./leader.js"></script>
 </body>
 
 </html>
