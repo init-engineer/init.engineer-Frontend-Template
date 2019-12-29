@@ -34,18 +34,267 @@
     <link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon" />
 
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
+    <style>
+        .title-background {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-image: url('./background.jpg');
+            background-size: cover;
+        }
+
+        .homepage-title-list {
+            position: absolute;
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+
+        }
+
+        .title-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 4em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: rgb(41, 236, 34);
+            text-shadow: 1px 1px rgb(40, 40, 40),
+                2px 2px rgb(40, 40, 40),
+                3px 3px rgb(40, 40, 40),
+                4px 4px rgb(40, 40, 40),
+                5px 5px rgb(40, 40, 40),
+                6px 6px rgb(40, 40, 40),
+                7px 7px rgb(40, 40, 40),
+                8px 8px rgb(40, 40, 40);
+        }
+
+        .title:first-child {
+            font-size: 6em;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .title>span {
+            font-size: 1.5em;
+            animation: fontcolor 2s linear infinite;
+        }
+
+        .homepage-title-list li {
+            position: absolute;
+            width: 260px;
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .homepage-title-list h3,
+        .homepage-title-list h4 {
+            position: relative;
+            font-size: 1.8em;
+            line-height: 1;
+            font-weight: 800;
+            text-shadow: 2px 3px 2px rgb(97, 97, 97);
+            color: white;
+
+        }
+
+        .homepage-title-list img {
+            display: block;
+            width: 250px;
+
+        }
+
+        .homepage-title-list li:nth-child(1) {
+            top: 0;
+            left: 0;
+            background-color: rgb(30, 196, 218);
+
+        }
+
+        .homepage-title-list li:nth-child(2) {
+            background-color: rgb(92, 238, 140);
+            top: 0;
+            right: 0;
+
+        }
+
+        .homepage-title-list li:nth-child(3) {
+            background-color: rgb(255, 167, 109);
+            bottom: 0;
+            left: 0;
+
+        }
+
+        .homepage-title-list li:nth-child(4) {
+            background-color: rgb(236, 62, 164);
+            bottom: 0;
+            right: 0;
+        }
+
+        .mobile-background {
+            background-image: radial-gradient(rgb(255, 34, 34), rgb(255, 158, 32));
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .mobile-title {
+            font-size: 3em;
+            font-weight: 600;
+            color: rgb(41, 236, 34);
+            text-shadow: 1px 1px rgb(40, 40, 40),
+                2px 2px rgb(40, 40, 40),
+                3px 3px rgb(40, 40, 40),
+                4px 4px rgb(40, 40, 40),
+                5px 5px rgb(40, 40, 40),
+                6px 6px rgb(40, 40, 40),
+                7px 7px rgb(40, 40, 40),
+                8px 8px rgb(40, 40, 40);
+        }
+
+        .mobile-slider {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .homepage-mobile-title-list {
+            list-style: none;
+            width: 400%;
+            padding: 0;
+            display: flex;
+            animation: mobileslider 8s linear infinite;
+        }
+
+        .homepage-mobile-title-list li {
+            width: 90%;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .homepage-mobile-title-list li:nth-child(1) {
+            background-color: rgb(30, 196, 218);
+        }
+
+        .homepage-mobile-title-list li:nth-child(2) {
+            background-color: rgb(92, 238, 140);
+        }
+
+        .homepage-mobile-title-list li:nth-child(3) {
+            background-color: rgb(255, 167, 109);
+        }
+
+        .homepage-mobile-title-list li:nth-child(4) {
+            background-color: rgb(236, 62, 164);
+        }
+
+        .homepage-mobile-title-list h3,
+        .homepage-mobile-title-list h4 {
+            font-size: 2.5em;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: 800;
+            text-shadow: 1px 1px 4px rgb(58, 58, 58);
+        }
+
+        .homepage-mobile-title-list img {
+            display: block;
+            margin: auto;
+            width: 90%;
+        }
+
+        @keyframes fontcolor {
+            0% {
+                color: rgb(41, 236, 34);
+            }
+
+            25% {
+                color: rgb(30, 196, 218);
+            }
+
+            50% {
+                color: rgb(236, 62, 164);
+            }
+
+            75% {
+                color: rgb(248, 122, 39);
+            }
+
+            100% {
+                color: rgb(41, 236, 34);
+            }
+        }
+
+        @keyframes mobileslider {
+            0% {
+                transform: translateX(0);
+            }
+
+            10% {
+                transform: translateX(-25%);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            35% {
+                transform: translateX(-50%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            60% {
+                transform: translateX(-75%);
+            }
+
+            75% {
+                transform: translateX(-75%);
+            }
+
+            85% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-img-star pt-5" style="background-color: black;">
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
+        <nav
+            class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
             <div>
                 <a href="https://kaobei.engineer" class="navbar-brand">純靠北工程師</a>
-                <a href="https://www.facebook.com/init.kobeengineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/220/220200.svg" alt="Facebook" class="rounded" width="30" height="30"></a>
-                <a href="https://twitter.com/kaobei_engineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/124/124021.svg" alt="Twitter" class="rounded" width="30" height="30"></a>
-                <a href="https://plurk.com/kaobei_engineer/" class="mr-2"><img src="https://image.flaticon.com/icons/svg/124/124026.svg" alt="Plurk" class="rounded" width="30" height="30"></a>
+                <a href="https://www.facebook.com/init.kobeengineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/220/220200.svg" alt="Facebook" class="rounded"
+                        width="30" height="30"></a>
+                <a href="https://twitter.com/kaobei_engineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/124/124021.svg" alt="Twitter" class="rounded"
+                        width="30" height="30"></a>
+                <a href="https://plurk.com/kaobei_engineer/" class="mr-2"><img
+                        src="https://image.flaticon.com/icons/svg/124/124026.svg" alt="Plurk" class="rounded" width="30"
+                        height="30"></a>
             </div>
-            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導航" class="navbar-toggler navbar-toggler-right border-0 collapsed">
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導航"
+                class="navbar-toggler navbar-toggler-right border-0 collapsed">
                 <span class="navbar-toggler-icon icon-bar top-bar"></span>
                 <span class="navbar-toggler-icon icon-bar middle-bar"></span>
                 <span class="navbar-toggler-icon icon-bar bottom-bar"></span>
@@ -73,19 +322,74 @@
         -->
         <div class="container">
             <!-- 電腦版 -->
-            <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
+            <div
+                class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100 title-background">
                 <!-- Something code ... -->
+                <div class="title-box">
+                    <h1 class="title">2019</h1>
+                    <h1 class="title"><span>純</span>靠北工程師</h1>
+                </div>
+                <ul class="homepage-title-list">
+                    <li>
+                        <h3>累積的文章數量</h3>
+                        <h4>2,000</h4>
+                        <img src="./cat.jpg" alt="">
+                    </li>
+                    <li>
+                        <h3>累積的社群留言</h3>
+                        <h4>55,000</h4>
+                        <img src="./isok.jpg" alt="">
+                    </li>
+                    <li>
+                        <h3>累積的案讚數量</h3>
+                        <h4>300,000</h4>
+                        <img src="./Leonardo.jpg" alt="">
+                    </li>
+                    <li>
+                        <h3>累積的分享數量</h3>
+                        <h4>100,000</h4>
+                        <img src="./shareButton.jpg" alt="">
+                    </li>
+                </ul>
             </div>
 
             <!-- 手機版 -->
-            <div class="d-md-none vh-100 position-relative">
+            <div class="d-md-none vh-100 position-relative mobile-background">
                 <!-- Something code ... -->
+                <div class="mobile-title-box">
+                    <h2 class="mobile-title">純靠北工程師</h2>
+                </div>
+                <div class="mobile-slider">
+                    <ul class="homepage-mobile-title-list">
+                        <li>
+                            <h3>累積的文章數量</h3>
+                            <h4>2,000</h4>
+                            <img src="./cat.jpg" alt="">
+                        </li>
+                        <li>
+                            <h3>累積的社群留言</h3>
+                            <h4>55,000</h4>
+                            <img src="./isok.jpg" alt="">
+                        </li>
+                        <li>
+                            <h3>累積的案讚數量</h3>
+                            <h4>300,000</h4>
+                            <img src="./Leonardo.jpg" alt="">
+                        </li>
+                        <li>
+                            <h3>累積的分享數量</h3>
+                            <h4>100,000</h4>
+                            <img src="./shareButton.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
 
-        <hr class="border border-w-4">
+    <hr class="border border-w-4">
 
-        <!--
+    <!--
             【年度最佳 xx 文章】
             說明：這個區塊會顯示 2019 年度全部社群平台的讚數加總起來，讚數累計最多的文章。
             必要顯示資料：
@@ -105,16 +409,17 @@
             - ./public/img/frontend/cards/cards-long.png
             - ./public/img/frontend/cards/cards-too-long.png
         -->
-        <div class="container">
-            <!-- 電腦版 -->
-            <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
-                <!-- Something code ... -->
-            </div>
-            
-            <!-- 手機版 -->
-            <div class="d-md-none vh-100 position-relative">
-                <!-- Something code ... -->
-            </div>
+    <div class="container">
+        <!-- 電腦版 -->
+        <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100 ">
+            <!-- Something code ... -->
+
+        </div>
+
+        <!-- 手機版 -->
+        <div class="d-md-none vh-100 position-relative">
+            <!-- Something code ... -->
+
         </div>
 
         <footer class="footer bg-black text-white page-footer font-small unique-color-dark">
@@ -123,7 +428,8 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-white font-weight-bold">關於本站</h6>
                         <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                        <p><img src="https://kaobei.engineer/img/frontend/background/WsOFRId.png" alt="就看你能多有梗" class="img-fluid rounded w-100"></p>
+                        <p><img src="https://kaobei.engineer/img/frontend/background/WsOFRId.png" alt="就看你能多有梗"
+                                class="img-fluid rounded w-100"></p>
                     </div>
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                         <h6 class="text-white font-weight-bold">聯絡我們</h6>
@@ -140,19 +446,37 @@
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
                         <h6 class="text-white font-weight-bold">社群平台</h6>
                         <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                        <p><a href="https://kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/Zl6Mrfs.png" alt="官方網站" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.facebook.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/zgwvd6x.png" alt="Facebook 測試機" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.facebook.com/init.kobeengineer"><img src="https://kaobei.engineer/img/frontend/banner/3qOl69x.png" alt="Facebook 正式機" class="img-fluid rounded"></a></p>
-                        <p><a href="https://twitter.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/aPI28fr.png" alt="Twitter" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.plurk.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/SFcRaLN.png" alt="Plurk" class="img-fluid rounded"></a></p>
-                        <p><a href="https://www.instagram.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/6FgkF3R.png" alt="Instagram" class="img-fluid rounded"></a></p>
-                        <p><a href="https://kaobei-engineer.tumblr.com"><img src="https://kaobei.engineer/img/frontend/banner/dffwOx9.png" alt="Tumblr" class="img-fluid rounded"></a></p>
-                        <p><a href="https://discord.gg/tPhnrs2"><img src="https://kaobei.engineer/img/frontend/banner/tknHq2i.png" alt="Discord" class="img-fluid rounded"></a></p>
+                        <p><a href="https://kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/Zl6Mrfs.png" alt="官方網站"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.facebook.com/kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/zgwvd6x.png" alt="Facebook 測試機"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.facebook.com/init.kobeengineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/3qOl69x.png" alt="Facebook 正式機"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://twitter.com/kaobei_engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/aPI28fr.png" alt="Twitter"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.plurk.com/kaobei_engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/SFcRaLN.png" alt="Plurk"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://www.instagram.com/kaobei.engineer"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/6FgkF3R.png" alt="Instagram"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://kaobei-engineer.tumblr.com"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/dffwOx9.png" alt="Tumblr"
+                                    class="img-fluid rounded"></a></p>
+                        <p><a href="https://discord.gg/tPhnrs2"><img
+                                    src="https://kaobei.engineer/img/frontend/banner/tknHq2i.png" alt="Discord"
+                                    class="img-fluid rounded"></a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright text-center text-white py-3">
-                <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br class="d-block d-md-none">Powered by <a href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
+                <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br
+                        class="d-block d-md-none">Powered by <a
+                        href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
             </div>
         </footer>
     </div><!-- #app -->
