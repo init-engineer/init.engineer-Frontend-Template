@@ -34,6 +34,16 @@
     <link rel="shortcut icon" href="./../public/favicon.ico" type="image/x-icon" />
 
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
+
+    <!-- This Page CSS -->
+    <link type="text/css" rel="stylesheet" href="./../public/css/leaderboard-2019.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
+
 </head>
 
 <body class="bg-img-star pt-5" style="background-color: black;">
@@ -75,6 +85,152 @@
             <!-- 電腦版 -->
             <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
                 <!-- Something code ... -->
+                <div id="index-2019-all-data-wrap">
+                    <p class="index-2019-title m-4">
+                        2019 LEADERBOARD
+                    </p>
+                    <div class="board-moving-wrap">
+                        <div class="board-wrap">
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/yell-cat.png" alt="累積的留言數量">
+                                    <div class="cate-img-cover">
+                                        <p>2,000</p>
+                                    </div>     
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積響應數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/un-cat.png" alt="累積的文章數量">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積文章數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/watch-phone-cat.png" alt="累積的分享數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>30,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度散播靠北數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/thumbs-up-cats.png" alt="累積的按讚數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度收割拇指數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/middle-finger-cat.png" alt="累積封鎖人數數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>20</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度被消失人數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/stare-cat.png" alt="累積刪除文章數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>100</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度刪除文章數</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="board-wrap">
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/yell-cat.png" alt="累積的留言數量">
+                                    <div class="cate-img-cover">
+                                        <p>2,000</p>
+                                    </div>     
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積響應數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/un-cat.png" alt="累積的文章數量">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積文章數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/watch-phone-cat.png" alt="累積的分享數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>30,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度散播靠北數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/thumbs-up-cats.png" alt="累積的按讚數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度收割拇指數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/middle-finger-cat.png" alt="累積封鎖人數數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>20</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度被消失人數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/stare-cat.png" alt="累積刪除文章數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>100</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度刪除文章數</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
 
             <!-- 手機版 -->
@@ -161,6 +317,14 @@
     <script src="./../public/js/manifest.js"></script>
     <script src="./../public/js/vendor.js"></script>
     <script src="./../public/js/frontend.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.chart').easyPieChart({
+                //your configuration goes here
+            });
+        });
+    </script>
 </body>
 
 </html>
