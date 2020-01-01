@@ -1,27 +1,37 @@
 $main-orange: #FA1C16;
 $main-white: #fff;
 
+// 標題
 #index-2019-all-data-wrap{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    // height: 100vh;
+    // background-color: rgba(255, 255, 255, 0.4);
     font-family: 'Microsoft JhengHei';
     overflow: hidden;
     .index-2019-title{
+        margin: 1rem 0;
         font-family: 'Press Start 2P';
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
         letter-spacing: 0.8rem;
         color: $main-white;
         text-shadow: 0 0 2rem;
-        animation: shine 5s infinite;
-        transition: 0.5s;
+        animation: shine 5s linear infinite;
+    }
+    .index-2019-dec{
+        margin: 2.5rem 0 3rem 0;
+        text-align: center;
+        color: $main-white;
+        font-family: 'Microsoft JhengHei';
+        letter-spacing: 2px;
     }
     .board-moving-wrap{
         display: flex;
+        margin: 3rem 0;
         .board-wrap{
             display: flex;
-            // animation: sliderShow 20s linear;
+            animation: sliderShow 20s linear infinite;
+            animation-play-state: running;
             .cate-wrap{
                 position: relative;
                 margin: 1rem 1.5rem;
@@ -37,7 +47,7 @@ $main-white: #fff;
                         }
                     }
                     .cate-title{
-                        color: $main-white;
+                        opacity: 1;
                     }
                 }
                 .cate-img{
@@ -73,6 +83,8 @@ $main-white: #fff;
                     }
                 }
                 .cate-title{
+                    color: $main-white;
+                    opacity: 0.2;
                     p{
                         margin-top: 0.8rem;
                         text-align: center;
@@ -83,20 +95,40 @@ $main-white: #fff;
             }
         }
     }
-}
 
+    //計時
+    .spent-count-time-wrap{
+        color: $main-white;
+        font-family: 'Microsoft JhengHei';
+        letter-spacing: 2px;
+        p{
+            text-align: center;
+            font-weight: 800;
+            .fun-count-min, .fun-count-sec{
+                font-family: 'Press Start 2P';
+                font-size: 0.8rem;
+                color: $main-orange;
+            }
+        }
+        .count{
+            text-align: center;
+            font-family: 'Press Start 2P';
+            font-size: 0.8rem;
+        }
+    }
+}
 
 // 標題霓虹燈動畫
 @keyframes shine{
     0%{
-        text-shadow: 0 0 2rem;;
+        text-shadow: 0 0 2rem;
     }
     50%{
-        text-shadow: 0 0 1vw $main-orange, 0 0 3vw $main-orange, 0 0 10vw $main-orange, 0 0 10vw $main-orange, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914; 
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 0vw #FA1C16, 0 0 2vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
     }
-    100%{
-        text-shadow: 0 0 2rem;;
-    }
+    // 100%{
+    //     text-shadow: 0 0 2rem;
+    // }
 }
 
 // 輪播動畫
@@ -108,3 +140,12 @@ $main-white: #fff;
         transform: translateX(-100%);
     }
 }
+
+
+// -----------
+// 年度最佳XX文章
+#index-2019-beat-article{
+    width: 100%;
+}
+
+

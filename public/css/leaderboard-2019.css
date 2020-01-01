@@ -1,34 +1,44 @@
 #index-2019-all-data-wrap {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
   font-family: 'Microsoft JhengHei';
   overflow: hidden;
 }
 
 #index-2019-all-data-wrap .index-2019-title {
+  margin: 1rem 0;
   font-family: 'Press Start 2P';
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   letter-spacing: 0.8rem;
   color: #fff;
   text-shadow: 0 0 2rem;
-  -webkit-animation: shine 5s infinite;
-          animation: shine 5s infinite;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-animation: shine 5s linear infinite;
+          animation: shine 5s linear infinite;
+}
+
+#index-2019-all-data-wrap .index-2019-dec {
+  margin: 2.5rem 0 3rem 0;
+  text-align: center;
+  color: #fff;
+  font-family: 'Microsoft JhengHei';
+  letter-spacing: 2px;
 }
 
 #index-2019-all-data-wrap .board-moving-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 3rem 0;
 }
 
 #index-2019-all-data-wrap .board-moving-wrap .board-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: sliderShow 20s linear infinite;
+          animation: sliderShow 20s linear infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 #index-2019-all-data-wrap .board-moving-wrap .board-wrap .cate-wrap {
@@ -58,7 +68,7 @@
 }
 
 #index-2019-all-data-wrap .board-moving-wrap .board-wrap .cate-wrap:hover .cate-title {
-  color: #fff;
+  opacity: 1;
 }
 
 #index-2019-all-data-wrap .board-moving-wrap .board-wrap .cate-wrap .cate-img {
@@ -95,6 +105,11 @@
   color: #FA1C16;
 }
 
+#index-2019-all-data-wrap .board-moving-wrap .board-wrap .cate-wrap .cate-title {
+  color: #fff;
+  opacity: 0.2;
+}
+
 #index-2019-all-data-wrap .board-moving-wrap .board-wrap .cate-wrap .cate-title p {
   margin-top: 0.8rem;
   text-align: center;
@@ -102,15 +117,35 @@
   font-weight: 800;
 }
 
+#index-2019-all-data-wrap .spent-count-time-wrap {
+  color: #fff;
+  font-family: 'Microsoft JhengHei';
+  letter-spacing: 2px;
+}
+
+#index-2019-all-data-wrap .spent-count-time-wrap p {
+  text-align: center;
+  font-weight: 800;
+}
+
+#index-2019-all-data-wrap .spent-count-time-wrap p .fun-count-min, #index-2019-all-data-wrap .spent-count-time-wrap p .fun-count-sec {
+  font-family: 'Press Start 2P';
+  font-size: 0.8rem;
+  color: #FA1C16;
+}
+
+#index-2019-all-data-wrap .spent-count-time-wrap .count {
+  text-align: center;
+  font-family: 'Press Start 2P';
+  font-size: 0.8rem;
+}
+
 @-webkit-keyframes shine {
   0% {
     text-shadow: 0 0 2rem;
   }
   50% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
-  }
-  100% {
-    text-shadow: 0 0 2rem;
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 0vw #FA1C16, 0 0 2vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
   }
 }
 
@@ -119,10 +154,7 @@
     text-shadow: 0 0 2rem;
   }
   50% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
-  }
-  100% {
-    text-shadow: 0 0 2rem;
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 0vw #FA1C16, 0 0 2vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
   }
 }
 
@@ -146,5 +178,9 @@
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
+}
+
+#index-2019-beat-article {
+  width: 100%;
 }
 /*# sourceMappingURL=leaderboard-2019.css.map */
