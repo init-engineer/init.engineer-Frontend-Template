@@ -39,7 +39,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            background-image: url('./background.jpg');
+            background-image:linear-gradient(60deg,rgb(0, 108, 180),rgb(255, 223, 79));
             background-size: cover;
         }
 
@@ -213,7 +213,77 @@
             margin: auto;
             width: 90%;
         }
+        
+        /*文章內容*/
+        .content-background {
+            background-image: linear-gradient(rgb(202, 202, 202),rgb(16, 196, 241));
+            display: flex;
+            flex-direction: column;
+        }
 
+        .content-background>h2 {
+            font-size: 3em;
+            font-weight: 800;
+            color: rgb(0, 88, 66);
+            text-shadow: 5px 5px 5px rgb(255, 243, 77);
+            transition: 0.3s;
+        }
+        .content-background>h2:hover{
+            transform: scale(1.1);
+        }
+        .article-container{
+            margin: 20px;
+            display: flex;
+        }
+        .article-content {
+            width: 50%;
+        }
+        .article-content>h2 {
+            color: rgb(228, 228, 228);
+            font-weight: 900;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 3px rgb(37, 37, 37);
+        }
+        .article-content a{
+            font-size: 0.8em;
+            color: rgb(0, 54, 124);
+           word-wrap: break-word;
+           text-shadow: none;
+        }
+        .article-content img {
+            display: block;
+            width: 100%;
+        }
+        .article-content ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+        }
+        .article-content ul h2{
+            font-size: 2em;
+            font-weight: 900;
+        }
+        .article-content ul li{
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            text-shadow: 3px 3px 3px rgb(31, 31, 31),
+            15px 15px 2px rgb(123, 255, 35),
+            -15px -15px 2px rgb(240, 255, 23);
+            transform: skewX(15deg);
+            transition: 0.3s;
+        }
+        .article-content ul li:nth-child(even){
+           text-align: right; 
+           text-shadow: -3px 3px 3px rgb(31, 31, 31),
+            -15px 15px 2px rgb(61, 81, 255),
+            15px -15px 2px rgb(255, 60, 196);
+           transform: skewX(-15deg);
+        }
+        .article-content ul li:hover{
+            color: rgb(129, 255, 133);
+        }
         @keyframes fontcolor {
             0% {
                 color: rgb(41, 236, 34);
@@ -411,9 +481,40 @@
         -->
     <div class="container">
         <!-- 電腦版 -->
-        <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100 ">
+        <div
+            class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100 content-background">
             <!-- Something code ... -->
+            <h2>年度最佳 xx 文章</h2>
+            <div class="article-container">
 
+                <div class="article-content">
+                    <h2>編號：#xxxx</h2>
+                    <h2>傳送門：<a href="https://kaobei.engineer/cards/show/xxxxx">
+                            https://kaobei.engineer/cards/show/xxxxxxxx
+                        </a>
+                    </h2>
+                    <img src="../public/img//frontend/cards/cards.png" alt="">
+                </div>
+                <div class="article-content">
+                    <ul>
+                        <li>
+                            <h2>Facebook 正式機讚數：5000</h2>
+                        </li>
+                        <li>
+                            <h2>Facebook 測試機讚數：5000</h2>
+                        </li>
+                        <li>
+                            <h2>Twitter 正式機讚數：5000</h2>
+                        </li>
+                        <li>
+                            <h2>Plurk 正式機讚數：5000</h2>
+                        </li>
+                        <li>
+                            <h2>總讚數：5555555</h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- 手機版 -->
