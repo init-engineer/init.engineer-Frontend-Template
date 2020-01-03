@@ -35,11 +35,12 @@
 
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
     <style>
+        /*文章標題*/
         .title-background {
             position: relative;
             display: flex;
             flex-direction: column;
-            background-image:linear-gradient(60deg,rgb(0, 108, 180),rgb(255, 223, 79));
+            background-image: linear-gradient(60deg, rgb(0, 108, 180), rgb(255, 223, 79));
             background-size: cover;
         }
 
@@ -140,6 +141,7 @@
             right: 0;
         }
 
+        /*文章標題手機板*/
         .mobile-background {
             background-image: radial-gradient(rgb(255, 34, 34), rgb(255, 158, 32));
             display: flex;
@@ -213,10 +215,10 @@
             margin: auto;
             width: 90%;
         }
-        
+
         /*文章內容*/
         .content-background {
-            background-image: linear-gradient(rgb(202, 202, 202),rgb(16, 196, 241));
+            background-image: linear-gradient(rgb(202, 202, 202), rgb(16, 196, 241));
             display: flex;
             flex-direction: column;
         }
@@ -228,62 +230,129 @@
             text-shadow: 5px 5px 5px rgb(255, 243, 77);
             transition: 0.3s;
         }
-        .content-background>h2:hover{
+
+        .content-background>h2:hover {
             transform: scale(1.1);
         }
-        .article-container{
+
+        .article-container {
             margin: 20px;
             display: flex;
         }
+
         .article-content {
+            position: relative;
             width: 50%;
         }
+
         .article-content>h2 {
             color: rgb(228, 228, 228);
             font-weight: 900;
             font-size: 2.5em;
             text-shadow: 3px 3px 3px rgb(37, 37, 37);
         }
-        .article-content a{
+
+        .article-content a {
             font-size: 0.8em;
             color: rgb(0, 54, 124);
-           word-wrap: break-word;
-           text-shadow: none;
+            word-wrap: break-word;
+            text-shadow: none;
         }
+
         .article-content img {
             display: block;
             width: 100%;
         }
-        .article-content ul{
+
+        .article-content ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             height: 100%;
             justify-content: space-around;
         }
-        .article-content ul h2{
+
+        .article-content ul h2 {
             font-size: 2em;
             font-weight: 900;
         }
-        .article-content ul li{
+
+        .article-content ul li {
             cursor: pointer;
             color: rgb(255, 255, 255);
             text-shadow: 3px 3px 3px rgb(31, 31, 31),
-            15px 15px 2px rgb(123, 255, 35),
-            -15px -15px 2px rgb(240, 255, 23);
+                15px 15px 2px rgb(123, 255, 35),
+                -15px -15px 2px rgb(240, 255, 23);
             transform: skewX(15deg);
             transition: 0.3s;
         }
-        .article-content ul li:nth-child(even){
-           text-align: right; 
-           text-shadow: -3px 3px 3px rgb(31, 31, 31),
-            -15px 15px 2px rgb(61, 81, 255),
-            15px -15px 2px rgb(255, 60, 196);
-           transform: skewX(-15deg);
+
+        .article-content ul li:nth-child(even) {
+            text-align: right;
+            text-shadow: -3px 3px 3px rgb(31, 31, 31),
+                -15px 15px 2px rgb(61, 81, 255),
+                15px -15px 2px rgb(255, 60, 196);
+            transform: skewX(-15deg);
         }
-        .article-content ul li:hover{
+
+        .article-content ul li:hover {
             color: rgb(129, 255, 133);
         }
+
+        .article-content .content-img {
+            position: absolute;
+            display: block;
+            width: 100px;
+            bottom: 0;
+            right: 0;
+        }
+
+        /*文章內容手機板*/
+        .content-mobile-background {
+            background-image: linear-gradient(rgb(58, 255, 196), rgb(82, 241, 43));
+        }
+
+        .article-mobile-container {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 15px 10px;
+        }
+
+        .article-mobile-container h3,
+        .article-mobile-container h2 {
+            word-wrap: break-word;
+            font-size: 1.4em;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            font-weight: 900;
+        }
+
+        .article-mobile-container h2 {
+            font-size: 1.9em;
+            text-align: center;
+            font-weight: 900;
+            color: rgb(255, 33, 4);
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+
+        .article-mobile-container img {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        @media screen and (max-height:720px) {
+
+            .article-mobile-container h3 {
+                font-size: 1.3em;
+            }
+            .article-mobile-container h2{
+                font-size: 1.5em;
+            }
+        }
+
         @keyframes fontcolor {
             0% {
                 color: rgb(41, 236, 34);
@@ -484,9 +553,8 @@
         <div
             class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100 content-background">
             <!-- Something code ... -->
-            <h2>年度最佳 xx 文章</h2>
+            <h2>年度最佳 xx 文章 !!</h2>
             <div class="article-container">
-
                 <div class="article-content">
                     <h2>編號：#xxxx</h2>
                     <h2>傳送門：<a href="https://kaobei.engineer/cards/show/xxxxx">
@@ -510,17 +578,31 @@
                             <h2>Plurk 正式機讚數：5000</h2>
                         </li>
                         <li>
-                            <h2>總讚數：5555555</h2>
+                            <h2>總讚數：5555555 &#9996;</h2>
                         </li>
                     </ul>
+                    <img class="content-img" src="./contentimg.png" alt="">
                 </div>
             </div>
         </div>
 
         <!-- 手機版 -->
-        <div class="d-md-none vh-100 position-relative">
+        <div class="d-md-none vh-100 position-relative content-mobile-background">
             <!-- Something code ... -->
-
+            <div class="article-mobile-container">
+                <h2>年度最佳 xx 文章 !!</h2>
+                <h3>編號：#xxxx</h3>
+                <h3>傳送門：<a href="https://kaobei.engineer/cards/show/xxxxx">
+                        https://kaobei.engineer/cards/show/xxxxx
+                    </a>
+                </h3>
+                <h3>總讚數：5555555 &#9996;</h3>
+                <img src="../public/img//frontend/cards/cards.png" alt="">
+                <h3>Facebook 正式機讚數：5000</h3>
+                <h3>Facebook 測試機讚數：5000</h3>
+                <h3>Twitter 正式機讚數：5000</h3>
+                <h3>Plurk 正式機讚數：5000</h3>
+            </div>
         </div>
 
         <footer class="footer bg-black text-white page-footer font-small unique-color-dark">
