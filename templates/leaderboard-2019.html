@@ -37,16 +37,15 @@
 
     <!-- This Page CSS -->
     <link type="text/css" rel="stylesheet" href="./../public/css/leaderboard-2019.css">
-
+    <!-- Font Type -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-
+    <!-- css-doodle -->
+    <script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
     <!-- Chart JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
 
 </head>
-
-<body class="bg-img-star pt-5" style="background-color: black;">
+<body class="" style="background-color: black;">
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
             <div>
@@ -248,9 +247,51 @@
                 </div>
             </div>
 
+            <css-doodle class="doodle">
+                :doodle {
+                  @grid: 50x1 / 50vmin;
+                  perspective: 23vmin;
+                }
+              
+                background: @multi(@r(200, 240), (
+                  radial-gradient(
+                    @p(#C0C0C0, #ccc, #FA1C16, #fff8dc) 10%,
+                    transparent -50%
+                  ) @r(100%) @r(100%) / @r(1%, 3%, .1) @lr() no-repeat
+                ));
+              
+                @size: 100%;
+                @place-cell: center;
+                
+                border-radius: 50%;
+                transform-style: preserve-3d;
+                animation: scale-up 20s linear infinite;
+                animation-delay: calc(@i() * -.4s);
+              
+                @keyframes scale-up {
+                  0% {
+                    opacity: 0;
+                    transform: translate3d(0, 0, 0) rotate(0);
+                  }
+                  10% { 
+                    opacity: 1; 
+                  }
+                  95% {
+                    transform:
+                      translate3d(0, 0, @r(50vmin, 55vmin))
+                      rotate(@r(-360deg, 360deg));
+                  }
+                  100% {
+                    opacity: 0;
+                    transform: translate3d(0, 0, 1vmin);
+                  }
+                }
+            </css-doodle>
+
             <!-- 手機版 -->
-            <div class="d-md-none vh-100 position-relative">
+            <div class="d-md-none vh-100 position-relative d-flex">
                 <!-- Something code ... -->
+                <p style="color:aliceblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis placeat assumenda mollitia iusto commodi? Similique, quas. Numquam, nostrum iure dolorum quod iste voluptates deleniti, itaque explicabo repellendus assumenda enim praesentium provident reprehenderit nobis. Cumque excepturi alias quisquam iste temporibus! Quo eveniet tenetur dolorem deserunt alias, nulla incidunt similique adipisci fuga quisquam blanditiis laudantium, esse at eligendi? Id voluptatibus eaque ratione perspiciatis iste aliquid! Consequatur doloremque eaque sit. Repellat a accusamus vitae beatae sint sit eum eveniet! Laboriosam libero enim consequatur consectetur qui, modi numquam architecto perferendis. In voluptate cumque eos aperiam necessitatibus laudantium, odio, obcaecati tenetur architecto dolorem incidunt. Ullam.</p>
             </div>
         </div>
 

@@ -1,4 +1,10 @@
+.doodle {
+  position: absolute;
+  z-index: 1;
+}
+
 #index-2019-all-data-wrap {
+  z-index: 10;
   width: 100%;
   font-family: 'Microsoft JhengHei';
   overflow: hidden;
