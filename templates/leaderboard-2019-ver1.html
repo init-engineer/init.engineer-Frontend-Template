@@ -36,13 +36,16 @@
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
 
     <!-- This Page CSS -->
-    <link type="text/css" rel="stylesheet" href="./../public/css/leaderboard-2019.css">
+    <link type="text/css" rel="stylesheet" href="./../public/css/leaderboard-2019-ver1.css">
     <!-- Font Type -->
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- css-doodle -->
+    <!-- <script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script> -->
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
 
-    
 </head>
-<body class="" style="background-color: #d8d8d8">
+<body class="" style="background-color: black;">
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
             <div>
@@ -79,58 +82,169 @@
         -->
         <div class="container">
             <!-- 電腦版 -->
-            <div id="all-wrap" class="d-none d-md-flex flex-column align-self-md-center justify-content-md-center align-items-md-center">
+            <div id="all-wrap" class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
                 <!-- Something code ... -->
-                <div class="pointer"></div>
-                <section id="leaderboard-title-section">
-                    <h1>Kaobei<br>Engineer</h1>
-                    <br>
-                    <h5>2019 Leader Board</h5>
-                </section>
+                <!-- 標題 -->
+                <div id="index-2019-all-data-wrap">
+                    <p class="index-2019-title">
+                        2019 LEADERBOARD
+                    </p>
 
-                <section id="leaderboard-years-accumulation">
-                    <div class="row m-0 p-0">
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度累積文章數</h5>
-                            <div class="chart" data-percent="75" data-scale-color="#ffb400">
-                                <p class="accumulation-num">2,000</p>
+                    <p class="index-2019-dec animated pulse infinite">點擊貓貓以獲得更多<del>貓貓</del>數據</p>
+
+                    <div class="board-moving-wrap">
+                        <div class="board-wrap">
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/yell-cat.png" alt="累積的留言數量">
+                                    <div class="cate-img-cover">
+                                        <p>2,000</p>
+                                    </div>     
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積響應數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/un-cat.png" alt="累積的文章數量">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積文章數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/watch-phone-cat.png" alt="累積的分享數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>30,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度散播靠北數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/thumbs-up-cats.png" alt="累積的按讚數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度收割拇指數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/middle-finger-cat.png" alt="累積封鎖人數數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>20</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度被消失人數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/stare-cat.png" alt="累積刪除文章數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>100</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度刪除文章數</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度累積響應數</h5>
-                            <div class="chart" data-percent="80" data-scale-color="#ffb400">
-                                <p class="accumulation-num">50,000</p>
+                        <div class="board-wrap">
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/yell-cat.png" alt="累積的留言數量">
+                                    <div class="cate-img-cover">
+                                        <p>2,000</p>
+                                    </div>     
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積響應數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/un-cat.png" alt="累積的文章數量">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度累積文章數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/watch-phone-cat.png" alt="累積的分享數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>30,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度散播靠北數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/thumbs-up-cats.png" alt="累積的按讚數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>50,000</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度收割拇指數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/middle-finger-cat.png" alt="累積封鎖人數數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>20</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度被消失人數</p>
+                                </div>
+                            </div>
+                            <div class="cate-wrap">
+                                <div class="cate-img">
+                                    <img src="/public/img/frontend/leaderboard/stare-cat.png" alt="累積刪除文章數量 ">
+                                    <div class="cate-img-cover">
+                                        <p>100</p>
+                                    </div> 
+                                </div>
+                                <div class="cate-title">
+                                    <p>年度刪除文章數</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度散播靠北數</h5>
-                            <div class="chart" data-percent="87" data-scale-color="#ffb400">
-                                <p class="accumulation-num">100,000</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度收割拇指數</h5>
-                            <div class="chart" data-percent="95" data-scale-color="#ffb400">
-                                <p class="accumulation-num">300,000</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度刪除文章數</h5>
-                            <div class="chart" data-percent="20" data-scale-color="#ffb400">
-                                <p class="accumulation-num">200</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度被消失人數</h5>
-                            <div class="chart" data-percent="5" data-scale-color="#ffb400">
-                                <p class="accumulation-num">87</p>
-                            </div>
-                        </div>
+
                     </div>
-                    
 
-                </section>
-
+                    <div class="spent-count-time-wrap mt-3">
+                        <p>
+                           你被神奇貓貓眷顧
+                           <span class="count">00分00秒</span> 
+                        </p>
+                        <p>你已停留了
+                            <span class="fun-count-min">00</span>
+                            分鐘，等於非洲過了
+                            <span class="fun-count-sec">0</span>
+                            秒
+                        </p>
+                    </div>
+                </div>
             </div>
             <!-- 手機版 -->
             <div class="d-md-none vh-100 position-relative d-flex">
@@ -165,6 +279,9 @@
             <div class="d-none d-md-flex align-self-md-center justify-content-md-center align-items-md-center vh-100">
                 <!-- Something code ... -->
                 <!-- 年度最佳XX文章 -->
+                <div id="index-2019-beat-article">
+
+                </div>
             </div>
             
             <!-- 手機版 -->
@@ -219,28 +336,39 @@
     <script src="./../public/js/frontend.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
 
+    <script >
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-    <script>
-        $(function() {
-            $('.chart').easyPieChart({
-                size: 180,
-                barColor: '#00ff00',
-                scaleLength: 0,
-                lineWidth: 10,
-            });
-        });
-    
+        // 輪播移入會停止
+        $(".cate-wrap").mouseenter(function(){
+            $(".board-wrap").css("animation-play-state","paused")
+        })
+        $(".cate-wrap").mouseleave(function(){
+            $(".board-wrap").css("animation-play-state","running")
+        })
 
-    
-        $(document).mousemove(function(e){
-            $('.pointer').css({
-                left: e.pageX - 50,
-                top: e.pageY - 50,
-            });
-        });
+        let message = "ฅ●ω●ฅ"
 
+        $(".cate-wrap").click(function(){
+            alert(message)
+        })
+
+        //計時
+
+        let setMinute = 0
+        function Check_Time() {
+            setMinute += 1;
+            // var Cal_Hour = Math.floor(setMinute / 3600);
+            var Cal_Minute = Math.floor(Math.floor(setMinute % 3600) / 60);
+            Cal_Minute = Cal_Minute >= 10 ? Cal_Minute : "0" + Cal_Minute;
+            var Cal_Second = setMinute % 60;
+            Cal_Second = Cal_Second >= 10 ? Cal_Second : "0" + Cal_Second;
+
+            $(".count").text(Cal_Minute + "分" + Cal_Second + "秒")
+            $(".fun-count-min").text(Cal_Minute)
+            $(".fun-count-sec").text(Cal_Minute*60)
+
+        }
+         window.setInterval("Check_Time()", 1000);
 
 
     </script>

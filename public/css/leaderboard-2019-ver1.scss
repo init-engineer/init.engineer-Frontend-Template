@@ -1,0 +1,158 @@
+$main-orange: #FA1C16;
+$main-white: #fff;
+
+
+.doodle{
+    position: absolute;
+    z-index: 1;
+}
+
+// 標題
+#index-2019-all-data-wrap{
+    z-index: 10;
+    width: 100%;
+    // height: 100vh;
+    // background-color: rgba(255, 255, 255, 0.4);
+    font-family: 'Microsoft JhengHei';
+    overflow: hidden;
+    .index-2019-title{
+        margin: 1rem 0;
+        font-family: 'Press Start 2P';
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 0.8rem;
+        color: $main-white;
+        text-shadow: 0 0 2rem;
+        animation: shine 5s linear infinite;
+    }
+    .index-2019-dec{
+        margin: 2.5rem 0 3rem 0;
+        text-align: center;
+        color: $main-white;
+        font-family: 'Microsoft JhengHei';
+        letter-spacing: 2px;
+    }
+    .board-moving-wrap{
+        display: flex;
+        margin: 3rem 0;
+        .board-wrap{
+            display: flex;
+            animation: sliderShow 20s linear infinite;
+            animation-play-state: running;
+            .cate-wrap{
+                position: relative;
+                margin: 1rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    cursor: pointer;
+                    .cate-img{
+                        .cate-img-cover{
+                            opacity: 1;
+                        }
+                    }
+                    .cate-title{
+                        opacity: 1;
+                    }
+                }
+                .cate-img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .cate-img-cover{
+                        transition: 0.3s;
+                        opacity: 0;
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        line-height: 150px;
+                        // display: flex;
+                        // justify-content: center;
+                        // align-items: center;
+                        border-radius: 50%;
+                        p{
+                            text-align: center;
+                            font-family: 'Press Start 2P';
+                            color: $main-orange;
+                        }
+                    }
+                }
+                .cate-title{
+                    color: $main-white;
+                    opacity: 0.2;
+                    p{
+                        margin-top: 0.8rem;
+                        text-align: center;
+                        font-size: 1rem;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+
+    //計時
+    .spent-count-time-wrap{
+        color: $main-white;
+        font-family: 'Microsoft JhengHei';
+        letter-spacing: 2px;
+        p{
+            text-align: center;
+            font-weight: 800;
+            .fun-count-min, .fun-count-sec{
+                font-family: 'Press Start 2P';
+                font-size: 0.8rem;
+                color: $main-orange;
+            }
+        }
+        .count{
+            text-align: center;
+            font-family: 'Press Start 2P';
+            font-size: 0.8rem;
+        }
+    }
+}
+
+// 標題霓虹燈動畫
+@keyframes shine{
+    0%{
+        text-shadow: 0 0 2rem;
+    }
+    50%{
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 0vw #FA1C16, 0 0 2vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
+    }
+    // 100%{
+    //     text-shadow: 0 0 2rem;
+    // }
+}
+
+// 輪播動畫
+@keyframes sliderShow{
+    0%{
+        transform: translateX-(-100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+// -----------
+// 年度最佳XX文章
+#index-2019-beat-article{
+    width: 100%;
+}
+
+
