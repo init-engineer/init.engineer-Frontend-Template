@@ -1,4 +1,4 @@
-# 純靠北工程師 前端模板 README.md
+# 純靠北工程師 前端模板實作活動 README.md
 
 ![GitHub contributors](https://img.shields.io/github/contributors/init-engineer/init.engineer-frontend-template.svg)
 ![GitHub stars](https://img.shields.io/github/stars/init-engineer/init.engineer-frontend-template.svg?style=social)
@@ -9,6 +9,12 @@
 - [Twitter 粉絲團](https://twitter.com/kaobei_engineer)
 - [Plurk 粉絲團](https://www.plurk.com/kaobei_engineer)
 ---
+## 簡述
+ 
+ 好像也沒有什麼好描述的（爆） 
+ 最後更新：109.01.25
+
+
 ## 簡介
 
 大家好，這是一份純靠北工程師的前端模板，面向的是單純只做局部頁面開發的前端開發者，如果你單純只想寫頁面，那這個 Repository 將是你最適合的模板範例，模板提供了最基本的前端資源，以及更進一步的 `scss`、`package.json`、`webpack.mix.js` ... 等等。
@@ -90,7 +96,7 @@
 
 ---
 #### 【活動期限】
-- 活動截止 2020/01/19(日)
+- 活動截止 <del>2020/01/19(日)</del> 2020/02/09
 
 ---
 #### 【簡要問答】
