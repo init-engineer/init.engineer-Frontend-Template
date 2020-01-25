@@ -1,6 +1,6 @@
 $main-white: #fff;
 $main-black: #000;
-// $main-brown: rgb(166, 122, 68)
+$main-brown: rgb(166, 122, 68);
 $main-green: #00ff00;
 
 
@@ -12,14 +12,41 @@ $main-green: #00ff00;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // background-image: url(https://images.plurk.com/7FS8t9O8RT5QRb6oKEfDAR.png);
+    top:0;
+    left: 0;
+    position: fixed;
     h1{
         font-size: 6rem;
-        color: $main-white;
+        color: transparent;
         line-height: 10rem;
+        position: relative;
+        text-align: center;
+        &::before{
+            position: absolute;
+            // letter-spacing: 15px;
+            content: 'Kaobei Engineer';
+            color: $main-white;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            animation: type 5s steps(15) ;
+            white-space: nowrap;
+        }
+        @keyframes type{
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+                border-right: 0;
+            }
+        }
     }
     h5{
-        color: #ccc;
+        color: $main-brown;
+        
     }
 }
 
@@ -35,11 +62,16 @@ $main-green: #00ff00;
     transform: translate(-50% -50%);
     pointer-events: none;
     mix-blend-mode: difference;
-    z-index: 6;
+    z-index: 10;
 }
 
 #leaderboard-years-accumulation{
-    font-family: 'Microsoft JhengHei';
+    width: 100%;
+    height: 300vh;
+    clip-path: polygon(50% 0%, 100% 14%, 100% 100%, 0 100%, 0 16%);    font-family: 'Microsoft JhengHei';
+    position: absolute;
+    top: 100vh;
+    padding-top: 25rem;
     .row{
         .years-accumulation-item{
             display: flex;
@@ -48,7 +80,7 @@ $main-green: #00ff00;
             align-items: center;
             h5{
                 font-size: 1.5rem;
-                margin-top: 2rem;
+                padding-top: 4rem;
             }
             .chart{
                 margin-top: 2rem;
@@ -61,8 +93,83 @@ $main-green: #00ff00;
                     margin: 0;
                     font-size: 1.4rem;
                     font-family: 'Black Ops One';
+                    color:  #dc3545;
+                }
+            }
+        }
+    }
+    
+    // 年度最佳XX文章
+    #best-title-section{
+        width: 100%;
+        font-family: 'Black Ops One';
+        text-align: center;
+        font-size: 4rem;
+        color: $main-brown;
+        // padding-top: 20rem;
+    }
+    #leaderboard-best-article-section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .best-article-wrap{
+            width: 90%;
+            background-color: $main-white;
+            padding: 2% 9%;
+            border-radius: 1rem;
+            color: $main-black;
+            text-decoration: none;
+            .article-top{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .article-title{
+                    font-family: 'Microsoft JhengHei';
+                    font-weight: 600;
+                    font-size: 2rem;
+                    margin: 1.5% 0;
+                }
+                .article-number{
+                    color: $main-brown;
+                    margin: 1.5% 0;
+                    font-family: 'Black Ops One';
+                }
+            }
+            .article-middle{
+                height: 500px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .article-bottom{
+                display: flex;
+                align-items: center;
+                .sns-count{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-grow: 1;
+                    margin: 1.5% 0;
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                        margin-right: 5%;
+                    }
+                    .sns-got-num{
+                        font-size: 2rem;
+                        font-family: 'Black Ops One';
+                        margin-top: 8px;
+                        color:  #dc3545;
+                    }
                 }
             }
         }
     }
 }
+
