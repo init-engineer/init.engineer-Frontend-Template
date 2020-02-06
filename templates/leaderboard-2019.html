@@ -36,17 +36,21 @@
     <link media="all" type="text/css" rel="stylesheet" href="./../public/css/frontend.css">
 
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="./../public/css/lightbox.css">
 
     <!-- This Page CSS -->
     <link type="text/css" rel="stylesheet" href="./../public/css/leaderboard-2019.css">
 
     <!-- Font Type -->
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 
-    
+
 </head>
-<body class="" style="background-color: #000;">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-full-bg navbar-dark bg-black fixed-top pt-0 pb-0 border-bottom border-white border-w-3">
             <div>
@@ -81,146 +85,209 @@
                 2019 年累積的刪除文章數量 | Example: 200
                 2019 年累積的被封鎖的人數 | Example: 50
         -->
-
         <div class="container-fluid p-0 m-0">
-            <!-- 電腦版 -->
-            <div id="all-wrap" class="d-none d-md-flex flex-column align-self-md-center justify-content-md-center align-items-md-center">
-                <!-- Something code ... -->
-                <!-- 圓形游標 -->
-                <div class="pointer"></div>
-                <!-- 首塊標題 -->
-                <section id="leaderboard-title-section" style="background-color: #000">
-                    <h1>Kaobei Engineer</h1>
-                    <br>
-                    <h5>2019 Leader Board</h5>
+            <div id="all-wrap" class="row d-flex d-md-flex flex-column p-0 m-0">
+                <!-- Something code -->
+                <section id="leaderBoard-entrance" class="parallax-window" data-parallax="scroll" data-image-src="../public/img/frontend/leaderboard/entrance-bg.jpg">
+                    <div class="title-wrap">
+                        <p class="entrance-title">純靠北工程師</p>
+                        <br>
+                        <p class="entrance-title-2">2019年度排行</p>
+                    </div>
+                    <div class="scroll-line"></div>
                 </section>
-                <!-- 年度標題 -->
-                <section id="leaderboard-years-accumulation" style="background-color: #ddd">
-                    <div class="row m-0 p-0">
-                        <!-- 六個圓圈 -->
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5 data-aos="zoom-in" data-aos-duration="1000">年度累積文章數</h5>
-                            <div class="chart" data-percent="75" data-scale-color="#ffb400">
-                                <p class="accumulation-num" data-aos="fade-down">2,000</p>
+
+                <section id="years-accumulation" class="col-12 p-0 m-0 parallax-window-2" data-parallax="scroll" data-image-src="../public/img/frontend/leaderboard/years-accumulation-bg.jpg">
+                    <div class="container p-0">
+                        <div class="row  p-0 m-0">
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度累積文章數</p>
+                                    <div id="year-acc-1" class="accumulation-num" data-val=2000></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5 data-aos="zoom-in" data-aos-duration="1000">年度累積響應數</h5>
-                            <div class="chart" data-percent="80" data-scale-color="#ffb400">
-                                <p class="accumulation-num" data-aos="fade-down">50,000</p>
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度累積響應數</p>
+                                    <div id="year-acc-2" class="accumulation-num" data-val=5000></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5 data-aos="zoom-in" data-aos-duration="1000">年度散播靠北數</h5>
-                            <div class="chart" data-percent="87" data-scale-color="#ffb400">
-                                <p class="accumulation-num" data-aos="fade-down">100,000</p>
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度散播靠北數</p>
+                                    <div id="year-acc-3" class="accumulation-num" data-val=10000></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5 data-aos="zoom-in" data-aos-duration="1000">年度收割拇指數</h5>
-                            <div class="chart" data-percent="95" data-scale-color="#ffb400">
-                                <p class="accumulation-num" data-aos="fade-down">300,000</p>
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度收割拇指數</p>
+                                    <div id="year-acc-4" class="accumulation-num" data-val=30000></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5 data-aos="zoom-in" data-aos-duration="1000">年度刪除文章數</h5>
-                            <div class="chart" data-percent="20" data-scale-color="#ffb400">
-                                <p class="accumulation-num" data-aos="fade-down">200</p>
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度刪除文章數</p>
+                                    <div id="year-acc-5" class="accumulation-num" data-val=200></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4 years-accumulation-item">
-                            <h5>年度被消失人數</h5>
-                            <div class="chart" data-percent="5" data-scale-color="#ffb400">
-                                <p class="accumulation-num">87</p>
+                            <div class="col-12 years-accumulation-wrap p-0 m-0">
+                                <div class="years-accumulation-item">
+                                    <p>年度被消失人數</p>
+                                    <div id="year-acc-6" class="accumulation-num" data-val=87></div>
+                                </div>                        
                             </div>
                         </div>
                     </div>
-                    <!-- 年度最佳XX文章 -->
-                    <div class="container" style="margin-top: 12rem;">
-                        <!-- 電腦版 -->
-                        <div class="d-none d-md-flex flex-column  align-self-md-center justify-content-md-center align-items-md-center vh-100">
-                            <!-- Something code ... -->
-                            <!-- 年度最佳文章標題 -->
-                            <h1 id="best-title-section" data-aos="fade-left">BEST ARTICLE</h1>
-                            <!-- 年度最佳文章內文 -->
-                            <section id="leaderboard-best-article-section" data-aos="flip-left" data-aos-duration="1500">
-                                <a class="best-article-wrap mt-3" href="#">
-                                    <div class="article-top">
-                                        <div class="article-title">Lorem ipsum dolor sit amet.</div>
-                                        <div class="article-number">#9487</div>
-                                    </div>
-                                    <div class="article-middle">
-                                        <img src="../public/img/frontend/cards/cards-too-long.png" alt="">
-                                    </div>
-                                    <div class="article-bottom">
-                                        <div class="sns-count">
-                                            <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="">
-                                            <div class="sns-got-num">1,111</div>
-                                        </div>
-                                        <div class="sns-count">
-                                            <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="">
-                                            <div class="sns-got-num">6,666</div>
-                                        </div>
-                                        <div class="sns-count">
-                                            <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="">
-                                            <div class="sns-got-num">8,888</div>
-                                        </div>
-                                    </div>
+                </section>
+
+                <section id="best-articles" class="m-0">
+                    <!-- 年度最多讚、年度最多分享、年度釣魚、年度沒人理，以及精選前十篇 -->
+                    <div class="container p-0">
+                        <div class="row p-0 m-0">
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">年度最多讚</p>
+                                    <p class="article-number">#9487</p>
+                                </div>
+                                <a class="article-img" href="../public/img/frontend/cards/cards-too-long.png" data-lightbox="1">
+                                    <img src="../public/img/frontend/cards/cards-too-long.png" alt="年度最多讚">
                                 </a>
-                            </section>
-                        </div>
-                        
-                        <!-- 手機版 -->
-                        <div class="d-md-none vh-100 position-relative">
-                            <!-- Something code ... -->
-                        </div>
-                    </div>
-
-                    <footer class="footer bg-black text-white page-footer font-small unique-color-dark">
-                        <div class="container text-center text-md-left mt-5">
-                            <div class="row mt-3 pt-5">
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <h6 class="text-white font-weight-bold">關於本站</h6>
-                                    <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                                    <p><img src="https://kaobei.engineer/img/frontend/background/WsOFRId.png" alt="就看你能多有梗" class="img-fluid rounded w-100"></p>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-                                    <h6 class="text-white font-weight-bold">聯絡我們</h6>
-                                    <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                                    <p><i class="fas fa-envelope mr-3"></i> kantai.developer@gmail.com</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">年度最多分享</p>
+                                    <p class="article-number">#5566</p>
                                 </div>
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <h6 class="text-white font-weight-bold">服務項目</h6>
-                                    <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                                    <p><a href="https://kaobei.engineer/policies">網站服務條款 &amp; 隱私權政策</a></p>
-                                    <p><a href="https://kaobei.engineer/cards">文章列表</a></p>
-                                    <p><a href="https://kaobei.engineer/cards/create">發表文章</a></p>
+                                <a class="article-img" href="../public/img/frontend/cards/cards-long.png" data-lightbox="2">
+                                    <img src="../public/img/frontend/cards/cards-long.png" alt="年度最多分享">
+                                </a>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
-                                    <h6 class="text-white font-weight-bold">社群平台</h6>
-                                    <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
-                                    <p><a href="https://kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/Zl6Mrfs.png" alt="官方網站" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://www.facebook.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/zgwvd6x.png" alt="Facebook 測試機" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://www.facebook.com/init.kobeengineer"><img src="https://kaobei.engineer/img/frontend/banner/3qOl69x.png" alt="Facebook 正式機" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://twitter.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/aPI28fr.png" alt="Twitter" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://www.plurk.com/kaobei_engineer"><img src="https://kaobei.engineer/img/frontend/banner/SFcRaLN.png" alt="Plurk" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://www.instagram.com/kaobei.engineer"><img src="https://kaobei.engineer/img/frontend/banner/6FgkF3R.png" alt="Instagram" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://kaobei-engineer.tumblr.com"><img src="https://kaobei.engineer/img/frontend/banner/dffwOx9.png" alt="Tumblr" class="img-fluid rounded"></a></p>
-                                    <p><a href="https://discord.gg/tPhnrs2"><img src="https://kaobei.engineer/img/frontend/banner/tknHq2i.png" alt="Discord" class="img-fluid rounded"></a></p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">年度最佳釣魚</p>
+                                    <p class="article-number">#8888</p>
+                                </div>
+                                <a class="article-img" href="../public/img/frontend/cards/cards.png" data-lightbox="3">
+                                    <img src="../public/img/frontend/cards/cards.png" alt="年度最佳釣魚">
+                                </a>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">年度最沒人理</p>
+                                    <p class="article-number">#5555</p>
+                                </div>
+                                <a class="article-img" href="../public/img/frontend/cards/cards-too-long.png" data-lightbox="4">
+                                    <img src="../public/img/frontend/cards/cards-too-long.png" alt="年度最沒人理">
+                                </a>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">精選十大</p>
+                                    <p class="article-number">#1111</p>
+                                </div>
+                                <a class="article-img" href="../public/img/frontend/cards/cards-too-long.png" data-lightbox="5">
+                                    <img src="../public/img/frontend/cards/cards-long.png" alt="精選十大">
+                                </a>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3 article-block p-0" data-aos="fade-up">
+                                <div class="article-top">
+                                    <p class="article-title">精選十大</p>
+                                    <p class="article-number">#2222</p>
+                                </div>
+                                <a class="article-img" href="../public/img/frontend/cards/cards-too-long.png" data-lightbox="6">
+                                    <img src="../public/img/frontend/cards/cards-long.png" alt="精選十大">
+                                </a>
+                                <div class="article-likes">
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-fb.png" alt="Facebook">
+                                        <p class="sns-num">1234</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-twitter.png" alt="Twitter">
+                                        <p class="sns-num">1235</p>
+                                    </div>
+                                    <div class="sns">
+                                        <img src="../public/img/frontend/leaderboard/sns-plurk.png" alt="Plurk">
+                                        <p class="sns-num">1236</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer-copyright text-center text-white py-3">
-                            <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br class="d-block d-md-none">Powered by <a href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
-                        </div>
-                    </footer>
+                    </div>
                 </section>
 
             </div>
-            <!-- 手機版 -->
-            <div class="d-md-none vh-100 position-relative d-flex">
-                <!-- Something code ... -->
-            </div>
+
         </div>
 
         <!-- <hr class="border border-w-4"> -->
@@ -246,10 +313,9 @@
             - ./public/img/frontend/cards/cards-too-long.png
         -->
 
-
-        <!-- <footer class="footer bg-black text-white page-footer font-small unique-color-dark">
+        <footer class="footer bg-black text-white page-footer font-small unique-color-dark">
             <div class="container text-center text-md-left mt-5">
-                <div class="row mt-3 pt-5">
+                <div class="row mt-3">
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-white font-weight-bold">關於本站</h6>
                         <hr class="bg-white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 32px;">
@@ -284,54 +350,89 @@
             <div class="footer-copyright text-center text-white py-3">
                 <p class="m-0">Copyright © 2019 純靠北工程師. <br class="d-block d-md-none">All rights reserved. <br class="d-block d-md-none">Powered by <a href="https://github.com/init-engineer/init.engineer">純靠北工程師</a>.</p>
             </div>
-        </footer> -->
-    </div><!-- #app -->
+        </footer>
+    </div>
 
     <!-- Scripts -->
     <script src="./../public/js/manifest.js"></script>
     <script src="./../public/js/vendor.js"></script>
     <script src="./../public/js/frontend.js"></script>
 
-    <!-- easy-pie-chart JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-    
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- parallax JS -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!-- MOVING LETTERS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- CountUp JS -->
+    <script src="./../public/js/countUp.js"></script>
+    <!-- LightBox JS -->
+    <script src="./../public/js/lightbox.js"></script>
     
+
     <script>
 
-        // easy-pie-chart
-        $(window).scroll(function(){
-            $('.chart').each(function(i){
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
+    // AOS
+    AOS.init();
 
-                if( bottom_of_window > bottom_of_object ){
-                    $('.chart').easyPieChart({
-                        size: 180,
-                        trackColor: 'rgb(255, 255, 255, 0.6)',
-                        barColor: 'rgb(166, 122, 68)',
-                        scaleLength: 0,
-                        lineWidth: 10,
-                     });
-                }
-            })
+
+    // 視差捲動 START
+        // Photo by Pankaj Patel on Unsplash
+        $('.parallax-window').parallax({imageSrc: '../public/img/frontend/leaderboard/entrance-bg.jpg'});
+        // Photo by Markus Spiske on Unsplash
+        $('.parallax-window-2').parallax({imageSrc: '../public/img/frontend/leaderboard/years-accumulation-bg.jpg'});
+    // 視差捲動 END
+
+
+    // 首頁文字動畫 START
+        var textWrapper = document.querySelector('.entrance-title');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        var textWrapper2 = document.querySelector('.entrance-title-2');
+        textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter2'>$&</span>");
+
+        anime.timeline({loop: false})
+        .add({
+            targets: '.entrance-title .letter',
+            scale: [4,1],
+            opacity: [0,1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 1000,
+            delay: (el, i) => 70*i
         })
 
+        anime.timeline({loop: false})
+        .add({
+            targets: '.entrance-title-2 .letter2',
+            scale: [4,1],
+            opacity: [0,1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 1000,
+            delay: (el, i) => 70*i
+        })
+    // 首頁文字動畫 END
 
-        // AOS
-        AOS.init();
+    // CountUp
+    $(window).scroll(function(){
+        $('.accumulation-num').each(function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                new CountUp ("year-acc-1",$("#year-acc-1").attr("data-val")).start()
+                new CountUp ("year-acc-2",$("#year-acc-2").attr("data-val")).start()
+                new CountUp ("year-acc-3",$("#year-acc-3").attr("data-val")).start()
+                new CountUp ("year-acc-4",$("#year-acc-4").attr("data-val")).start()
+                new CountUp ("year-acc-5",$("#year-acc-5").attr("data-val")).start()
+                new CountUp ("year-acc-6",$("#year-acc-6").attr("data-val")).start()
+            }
+        })
+    });
+
+
+
+
     
-        // 圓形游標
-        $(document).mousemove(function(e){
-            $('.pointer').css({
-                left: e.pageX - 50,
-                top: e.pageY - 50,
-            });
-        });
-
-
 
     </script>
 </body>
