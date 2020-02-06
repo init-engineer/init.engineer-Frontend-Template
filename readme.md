@@ -9,10 +9,18 @@
 - [Twitter 粉絲團](https://twitter.com/kaobei_engineer)
 - [Plurk 粉絲團](https://www.plurk.com/kaobei_engineer)
 ---
-## 簡述
- 
+## 切版簡述
+  
+ 最後更新：109.02.06 
+  
  好像也沒有什麼好描述的（爆） 
- 最後更新：109.02.06
+ 這是第三個版本，應該也是最終版了。主要有視差捲動、累積數字計數、文字動畫與捲動動畫，感謝巨人前輩們的肩膀！
+ 以下是使用到的 Plugin
+ - [Aos.js](https://github.com/michalsnik/aos) → scroll 捲動動畫 Plugin
+ - [countUp.js](https://github.com/inorganik/countUp.js) → 計數 Plugin
+ - [lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) → 燈箱 Plugin
+ - [MOVING LETTERS](https://tobiasahlin.com/moving-letters/) → 文字動畫 Plugin
+ - [Parallax.js](https://github.com/pixelcog/parallax.js) → 視差捲動 Plugin　
 
 
 ## 簡介
