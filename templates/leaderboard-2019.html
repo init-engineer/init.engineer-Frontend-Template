@@ -90,37 +90,37 @@
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度累積文章數</p>
-                                    <div id="year-acc-1" class="accumulation-num" data-val=2000></div>
+                                    <div id="year-acc-1" class="accumulation-num" data-val=2000 data-animation="true"></div>
                                 </div>                        
                             </div>
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度累積響應數</p>
-                                    <div id="year-acc-2" class="accumulation-num" data-val=5000></div>
+                                    <div id="year-acc-2" class="accumulation-num" data-val=5000 data-animation="true"></div>
                                 </div>                        
                             </div>
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度散播靠北數</p>
-                                    <div id="year-acc-3" class="accumulation-num" data-val=10000></div>
+                                    <div id="year-acc-3" class="accumulation-num" data-val=10000 data-animation="true"></div>
                                 </div>                        
                             </div>
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度收割拇指數</p>
-                                    <div id="year-acc-4" class="accumulation-num" data-val=30000></div>
+                                    <div id="year-acc-4" class="accumulation-num" data-val=30000 data-animation="true"></div>
                                 </div>                        
                             </div>
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度刪除文章數</p>
-                                    <div id="year-acc-5" class="accumulation-num" data-val=200></div>
+                                    <div id="year-acc-5" class="accumulation-num" data-val=200 data-animation="true"></div>
                                 </div>                        
                             </div>
                             <div class="col-12 years-accumulation-wrap p-0 m-0">
                                 <div class="years-accumulation-item">
                                     <p>年度被消失人數</p>
-                                    <div id="year-acc-6" class="accumulation-num" data-val=87></div>
+                                    <div id="year-acc-6" class="accumulation-num" data-val=87 data-animation="true"></div>
                                 </div>                        
                             </div>
                         </div>
@@ -374,57 +374,24 @@
         })
     // 首頁文字動畫 END
 
-    // CountUp
-
+    // 計數器 START
     $(window).scroll(function(){
-        $('.accumulation-num').each(function(i){
+        // 感謝小蟹神支援幫忙解決 bug (github：wildjcrt)
+        if ($('.accumulation-num').filter(function() { return $(this).data('animation') & true }).length === 0) return
+        $('.accumulation-num').each(function(){
+            var currentId = $(this).attr('id').split('-')[2];
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
+
             if( bottom_of_window > bottom_of_object ){
-                new CountUp ("year-acc-1",$("#year-acc-1").attr("data-val")).start()
-                new CountUp ("year-acc-2",$("#year-acc-2").attr("data-val")).start()
-                new CountUp ("year-acc-3",$("#year-acc-3").attr("data-val")).start()
-                new CountUp ("year-acc-4",$("#year-acc-4").attr("data-val")).start()
-                new CountUp ("year-acc-5",$("#year-acc-5").attr("data-val")).start()
-                new CountUp ("year-acc-6",$("#year-acc-6").attr("data-val")).start()
+                if ($("#year-acc-" + currentId).data('animation')) {
+                    new CountUp ("year-acc-"+currentId, $("#year-acc-"+currentId).attr("data-val")).start();
+                    $("#year-acc-"+currentId).data('animation', false);
+                }
             }
         })
     });
-
-    // let windowTop = $(window).scrollTop()
-    // let windowBottom = windowTop + $(window).innerHeight()
-
-    // $(window).scroll(function(){
-    //     windowTop = $(window).scrollTop()
-    //     // console.log("windowTop",windowTop)
-    //     windowBottom = windowTop + $(window).innerHeight()
-    //     // console.log("windowBottom",windowBottom)
-        
-    //     let a = [];
-        
-    //     $(".accumulation-num").each(function(){
-    //         let accumulation_num_middle = $(this).offset().top + $(this).height()/2;
-    //         console.log("accumulation_num_middle",accumulation_num_middle);
-    //         a.push(accumulation_num_middle)
-    //         console.log("a",a)
-    //     })
-
-    // })
-
-    // $(window).scroll(function(){
-    //     scrollGo();
-    // })
-
-    // function scrollGo(){
-    //     var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop; //this makes it work in all browsers
-    //     var height = document.getElementById("year-acc-1").clientHeight; //the height of the previous div for example
-    //     if (bodyScrollTop > height) {
-    //         console.log("123")
-    //         new CountUp ("year-acc-1",$("#year-acc-1").attr("data-val")).start()
-    //     } else {
-    //         //something else
-    //     }
-    // }
+    // 計數器 END
 
     </script>
 </body>
