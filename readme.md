@@ -21,6 +21,8 @@
  - [lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) → 燈箱 Plugin
  - [MOVING LETTERS](https://tobiasahlin.com/moving-letters/) → 文字動畫 Plugin
  - [Parallax.js](https://github.com/pixelcog/parallax.js) → 視差捲動 Plugin　
+ 
+ 請直接開啟 `templates/init.engineer-frontend-template.html` 即可
 
 
 ## 簡介
